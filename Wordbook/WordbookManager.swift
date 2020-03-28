@@ -105,19 +105,23 @@ class WordbookDataManager {
         shuffledWordbookDataArray = wordbookDataArray.shuffled()
         
         //正答率フィルタをかける
+        
+        //設定値を読み込み
+        let userDefaults = UserDefaults.standard
+        let settingThreshold = userDefaults.float(forKey: "threshold")
+        
         for (_,dataArray) in shuffledWordbookDataArray.enumerated() {
             var correctAnswerRatio:Float = 0
             if dataArray.numberOfAppearance != 0 {
                 correctAnswerRatio = Float(dataArray.numberOfCorrect) / Float(dataArray.numberOfAppearance)
             }
-            if correctAnswerRatio <= 1 { // 正答率フィルタ、この数値は後々セッティングで変えられるようにしたい
+            if correctAnswerRatio <= settingThreshold { // 正答率フィルタ
                 filteredShuffledWordbookDataArray.append(dataArray)
             } else {
                 // 正答率フィルタで除外されたもの、保存用に使いたい
                 otherArray.append(dataArray)
             }
         }
-            
         
     }
     

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5639FFE23D4643000525E73 /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5639FFD23D4643000525E73 /* WordDetailViewController.swift */; };
+		A558C4F023DC0D79004302BE /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558C4EF23DC0D79004302BE /* WordDetailViewController.swift */; };
+		A558C4F223DC3DCD004302BE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558C4F123DC3DCD004302BE /* CustomTextField.swift */; };
 		A5CC021223D3127C00E0D709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC021123D3127C00E0D709 /* AppDelegate.swift */; };
 		A5CC021423D3127C00E0D709 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC021323D3127C00E0D709 /* SceneDelegate.swift */; };
 		A5CC021623D3127C00E0D709 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC021523D3127C00E0D709 /* ViewController.swift */; };
@@ -23,7 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A5639FFD23D4643000525E73 /* WordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		A558C4EF23DC0D79004302BE /* WordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
+		A558C4F123DC3DCD004302BE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A5CC020E23D3127B00E0D709 /* Wordbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CC021123D3127C00E0D709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5CC021323D3127C00E0D709 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 		A5CC021023D3127C00E0D709 /* Wordbook */ = {
 			isa = PBXGroup;
 			children = (
-				A5639FFD23D4643000525E73 /* WordDetailViewController.swift */,
+				A558C4EF23DC0D79004302BE /* WordDetailViewController.swift */,
 				A5CC021123D3127C00E0D709 /* AppDelegate.swift */,
 				A5CC021323D3127C00E0D709 /* SceneDelegate.swift */,
 				A5CC022723D32A7D00E0D709 /* WordbookManager.swift */,
@@ -84,6 +86,7 @@
 				A5CC021C23D3127F00E0D709 /* LaunchScreen.storyboard */,
 				A5CC022D23D3349000E0D709 /* wordbook.csv */,
 				A5CC021F23D3127F00E0D709 /* Info.plist */,
+				A558C4F123DC3DCD004302BE /* CustomTextField.swift */,
 			);
 			path = Wordbook;
 			sourceTree = "<group>";
@@ -164,8 +167,9 @@
 				A5CC022823D32A7D00E0D709 /* WordbookManager.swift in Sources */,
 				A5CC021623D3127C00E0D709 /* ViewController.swift in Sources */,
 				A5CC021223D3127C00E0D709 /* AppDelegate.swift in Sources */,
+				A558C4F223DC3DCD004302BE /* CustomTextField.swift in Sources */,
 				A5CC021423D3127C00E0D709 /* SceneDelegate.swift in Sources */,
-				A5639FFE23D4643000525E73 /* WordDetailViewController.swift in Sources */,
+				A558C4F023DC0D79004302BE /* WordDetailViewController.swift in Sources */,
 				A5CC022C23D32AC200E0D709 /* SettingViewController.swift in Sources */,
 				A5CC022A23D32AAD00E0D709 /* WordbookViewController.swift in Sources */,
 				A5DE9E9323D3FE3F00E839C5 /* DetailInTestViewController.swift in Sources */,
@@ -319,10 +323,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.fumkob0318.Wordbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -337,10 +342,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.fumkob0318.Wordbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
