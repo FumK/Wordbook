@@ -15,16 +15,18 @@ class WordbookViewController: UIViewController, UITableViewDataSource, UITableVi
     var wordList = [String]()
     
     @IBOutlet weak var tableView: UITableView!
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //ソートする
+        wordbookDataArray = wordbookDataArray.sorted(by: {$0.word < $1.word})
         // 単語を抜き出す
         for counter in 0..<wordbookDataArray.count {
             wordList.append(wordbookDataArray[counter].word)
         }
-    //ソートする
-//        wordList = wordList.sorted {$0 < $1}
+        
+        print(wordList)
     }
     
     
@@ -34,9 +36,10 @@ class WordbookViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
-    
-                
+        
+        
         let wordTitle = wordList[indexPath.row]
+        print(wordTitle)
         cell.textLabel?.text = wordTitle
         
         
@@ -59,15 +62,15 @@ class WordbookViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

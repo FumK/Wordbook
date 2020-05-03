@@ -35,7 +35,7 @@ class TestViewController: UIViewController {
         }
         percentNumberLabel.text = String(format: "%.1f ", correctPercent)
         //問題数表示
-        testNumberLabel.text = String(testNumberCount) + "/" + String(WordbookDataManager.sharedInstance.filteredShuffledWordbookDataArray.count)
+        testNumberLabel.text = String(testNumberCount) + "/" + String(filteredShuffledWordbookDataArray.count)
     }
     
     //わかったボタン押したとき
@@ -101,6 +101,7 @@ class TestViewController: UIViewController {
             //遷移
             present(nextTestViewController, animated: false, completion: nil)
         }
+        
     }
     
     // CSVに保存する

@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		A558C4EF23DC0D79004302BE /* WordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
 		A558C4F123DC3DCD004302BE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		A5CC020E23D3127B00E0D709 /* Wordbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CC020E23D3127B00E0D709 /* 単語帳.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "単語帳.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CC021123D3127C00E0D709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5CC021323D3127C00E0D709 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A5CC021523D3127C00E0D709 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		A5CC020F23D3127B00E0D709 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5CC020E23D3127B00E0D709 /* Wordbook.app */,
+				A5CC020E23D3127B00E0D709 /* 単語帳.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +108,7 @@
 			);
 			name = Wordbook;
 			productName = Wordbook;
-			productReference = A5CC020E23D3127B00E0D709 /* Wordbook.app */;
+			productReference = A5CC020E23D3127B00E0D709 /* 単語帳.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -325,7 +325,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.fumkob0318.Wordbook;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "単語帳";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -344,7 +344,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.fumkob0318.Wordbook;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "単語帳";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

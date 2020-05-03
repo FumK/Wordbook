@@ -11,7 +11,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,9 +22,10 @@ class ViewController: UIViewController {
         WordbookDataManager.sharedInstance.loadWordbook()
         
         // 遷移先情報ゲット
-        guard let testViewController = storyboard!.instantiateViewController(withIdentifier: "test") as? TestViewController else {
-            return
-        }
+//        guard let testViewController = storyboard!.instantiateViewController(withIdentifier: "test") as? TestViewController else {
+//            return
+//        }
+        let testViewController = storyboard!.instantiateViewController(withIdentifier: "test") as! TestViewController
         if let wordbookData = WordbookDataManager.sharedInstance.nextWord() {
             // 次に表示する単語の準備
             //            guard let wordbookData = WordbookDataManager.sharedInstance.nextWord()
@@ -57,40 +58,7 @@ class ViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*
-        // テスト開始が押された場合
-        if segue.identifier == "goTest" {
-            // CSV読み込み
-            WordbookDataManager.sharedInstance.loadWordbook()
-            
-            // 遷移先情報ゲット
-            guard let testViewController = segue.destination as? TestViewController else {
-                return
-            }
-        
-        // 次に表示する単語の準備
-//        guard let wordbookData = WordbookDataManager.sharedInstance.nextWord()
-            if let wordbookData = WordbookDataManager.sharedInstance.nextWord() {
-                //　単語帳自体を吸い出し
-//                let shuffledWordbookDataArray = WordbookDataManager.sharedInstance.shuffledWordbookDataArray
-                let filteredShuffledWordbookDataArray = WordbookDataManager.sharedInstance.filteredShuffledWordbookDataArray
-                let otherArray = WordbookDataManager.sharedInstance.otherArray
-
-                            
-                // 値受け渡し
-                testViewController.wordbookData = wordbookData
-//                testViewController.shuffledWordbookDataArray = shuffledWordbookDataArray
-                testViewController.filteredShuffledWordbookDataArray = filteredShuffledWordbookDataArray
-                testViewController.otherArray = otherArray
-            }
-            else {
-                print("問題がないよ！")
-                return
-            } */
-            
-        
-        
-            // リスト
+        // リスト
         if segue.identifier == "goWordbook" {
             // CSV読み込み
             WordbookDataManager.sharedInstance.loadWordbook()
@@ -109,12 +77,12 @@ class ViewController: UIViewController {
         }
         
     }
-        
+    
     
     
     @IBAction func gotoTitle(_ segue: UIStoryboardSegue) {
     }
-
-
+    
+    
 }
 
