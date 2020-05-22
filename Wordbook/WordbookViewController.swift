@@ -13,7 +13,8 @@ class WordbookViewController: UIViewController, UITableViewDataSource, UITableVi
     //データ受け取り
     var wordbookDataArray = [WordbookData]()
     var wordList = [String]()
-    
+    //+ボタンを宣言
+    var addBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -26,7 +27,18 @@ class WordbookViewController: UIViewController, UITableViewDataSource, UITableVi
             wordList.append(wordbookDataArray[counter].word)
         }
         
-        print(wordList)
+        //+ボタンの初期化
+        addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped(_:)))
+        //+ボタンを追加
+        self.navigationItem.rightBarButtonItem = addBarButtonItem
+    }
+    
+    
+    //+ボタンを押した時の対応
+    @objc func addBarButtonTapped(_ sender: UIBarButtonItem) {
+//        let addViewController = storyboard!.instantiateViewController(identifier: "add") as! AddViewController
+//        self.present(addViewController, animated: true, completion: nil)
+        transactionToAddViewController()
     }
     
     
@@ -39,7 +51,7 @@ class WordbookViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
         let wordTitle = wordList[indexPath.row]
-        print(wordTitle)
+//        print(wordTitle)
         cell.textLabel?.text = wordTitle
         
         
@@ -61,16 +73,35 @@ class WordbookViewController: UIViewController, UITableViewDataSource, UITableVi
         wordDetailViewController.wordbookDataArray = wordbookDataArray
     }
     
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    //更新用
+    func transactionToAddViewController() {
+        let addViewController = storyboard?.instantiateViewController(identifier: "add") as! AddViewController
+        addViewController.presentationController?.delegate = self
+        present(addViewController, animated: true, completion: nil)
+    }
+        
+}
+
+//更新用
+extension WordbookViewController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+//        let vc = storyboard!.instantiateViewController(withIdentifier: "add") as! AddViewController
+//        wordbookDataArray = vc.wordbookDataArray
+        //CSV読み込み
+        wordbookDataArray.removeAll()//以前の値を一旦消去
+        wordList.removeAll()
+        WordbookDataManager.sharedInstance.loadWordbook()
+        wordbookDataArray = WordbookDataManager.sharedInstance.wordbookDataArray
+        
+        //ViewDidLoadと同じ
+        //ソートする
+        wordbookDataArray = wordbookDataArray.sorted(by: {$0.word < $1.word})
+        // 単語を抜き出す
+        for counter in 0..<wordbookDataArray.count {
+            wordList.append(wordbookDataArray[counter].word)
+        }
+        print(wordList)
+        //更新
+        tableView.reloadData()
+    }
 }

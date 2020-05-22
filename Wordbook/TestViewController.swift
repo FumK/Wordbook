@@ -65,6 +65,10 @@ class TestViewController: UIViewController {
     
     //Doneボタンを押したとき
     @IBAction func doneButton(_ sender: Any) {
+        
+        //今までの結果を保存
+        WordbookDataManager.sharedInstance.saveCSV(targetArray: filteredShuffledWordbookDataArray + otherArray)
+//        saveCSV(targetArray: filteredShuffledWordbookDataArray + otherArray)
         //トップ画面に戻る
         if let topViewController = storyboard?.instantiateViewController(identifier: "top") as? ViewController {
             //遷移
@@ -79,7 +83,8 @@ class TestViewController: UIViewController {
         guard let nextTest = WordbookDataManager.sharedInstance.nextWord() else {
             //なかったら配列を保存しつつトップ画面に戻る
             //保存
-            saveCSV(targetArray: filteredShuffledWordbookDataArray + otherArray)
+            WordbookDataManager.sharedInstance.saveCSV(targetArray: filteredShuffledWordbookDataArray + otherArray)
+//            saveCSV(targetArray: filteredShuffledWordbookDataArray + otherArray)
             //トップへ遷移
             if let topViewController = storyboard?.instantiateViewController(identifier: "top") as? ViewController {
                 //遷移
@@ -89,7 +94,7 @@ class TestViewController: UIViewController {
         }
         
         //あったら次の問題に行く
-        if let nextTestViewController = storyboard?.instantiateViewController(identifier: "test") as? TestViewController {
+        if let nextTestViewController = storyboard?.instantiateViewController(identifier: "pageView") as? TestPageViewController {
             //次の問題を受け渡し
             nextTestViewController.wordbookData = nextTest
             //問題数を受け渡し
@@ -103,7 +108,7 @@ class TestViewController: UIViewController {
         }
         
     }
-    
+    /* WordbookManagerに移動
     // CSVに保存する
     func saveCSV(targetArray: [WordbookData]) {
         //初期化
@@ -151,5 +156,5 @@ class TestViewController: UIViewController {
             print("Documentに保存されませんでした")
         }
         
-    }
+    } */
 }

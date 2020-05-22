@@ -22,27 +22,21 @@ class ViewController: UIViewController {
         WordbookDataManager.sharedInstance.loadWordbook()
         
         // 遷移先情報ゲット
-//        guard let testViewController = storyboard!.instantiateViewController(withIdentifier: "test") as? TestViewController else {
-//            return
-//        }
-        let testViewController = storyboard!.instantiateViewController(withIdentifier: "test") as! TestViewController
+        let testPageViewController = storyboard!.instantiateViewController(withIdentifier: "pageView") as! TestPageViewController
+        //Managerから各情報ゲット
         if let wordbookData = WordbookDataManager.sharedInstance.nextWord() {
-            // 次に表示する単語の準備
-            //            guard let wordbookData = WordbookDataManager.sharedInstance.nextWord()
-            //　単語帳自体を吸い出し
-            //                let shuffledWordbookDataArray = WordbookDataManager.sharedInstance.shuffledWordbookDataArray
             let filteredShuffledWordbookDataArray = WordbookDataManager.sharedInstance.filteredShuffledWordbookDataArray
             let otherArray = WordbookDataManager.sharedInstance.otherArray
             
             
             // 値受け渡し
-            testViewController.wordbookData = wordbookData
+            testPageViewController.wordbookData = wordbookData
             //                testViewController.shuffledWordbookDataArray = shuffledWordbookDataArray
-            testViewController.filteredShuffledWordbookDataArray = filteredShuffledWordbookDataArray
-            testViewController.otherArray = otherArray
+            testPageViewController.filteredShuffledWordbookDataArray = filteredShuffledWordbookDataArray
+            testPageViewController.otherArray = otherArray
             
             //画面遷移
-            self.present(testViewController,animated:true, completion: nil)
+            self.present(testPageViewController,animated:true, completion: nil)
             
         } else {
             //Alert画面を表示

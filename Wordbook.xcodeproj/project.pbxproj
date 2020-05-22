@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51AB5D0245FE26B009B5397 /* TestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AB5CF245FE26B009B5397 /* TestPageViewController.swift */; };
+		A54C06952461BE5E006C8DC8 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C06942461BE5E006C8DC8 /* AddViewController.swift */; };
 		A558C4F023DC0D79004302BE /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558C4EF23DC0D79004302BE /* WordDetailViewController.swift */; };
 		A558C4F223DC3DCD004302BE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558C4F123DC3DCD004302BE /* CustomTextField.swift */; };
+		A59C05312462C1A000354894 /* AddDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59C05302462C1A000354894 /* AddDetailViewController.swift */; };
 		A5CC021223D3127C00E0D709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC021123D3127C00E0D709 /* AppDelegate.swift */; };
 		A5CC021423D3127C00E0D709 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC021323D3127C00E0D709 /* SceneDelegate.swift */; };
 		A5CC021623D3127C00E0D709 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC021523D3127C00E0D709 /* ViewController.swift */; };
@@ -24,8 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A51AB5CF245FE26B009B5397 /* TestPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageViewController.swift; sourceTree = "<group>"; };
+		A54C06942461BE5E006C8DC8 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		A558C4EF23DC0D79004302BE /* WordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
 		A558C4F123DC3DCD004302BE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A59C05302462C1A000354894 /* AddDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailViewController.swift; sourceTree = "<group>"; };
 		A5CC020E23D3127B00E0D709 /* 単語帳.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "単語帳.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CC021123D3127C00E0D709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5CC021323D3127C00E0D709 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,21 +78,24 @@
 		A5CC021023D3127C00E0D709 /* Wordbook */ = {
 			isa = PBXGroup;
 			children = (
-				A558C4EF23DC0D79004302BE /* WordDetailViewController.swift */,
 				A5CC021123D3127C00E0D709 /* AppDelegate.swift */,
 				A5CC021323D3127C00E0D709 /* SceneDelegate.swift */,
 				A5CC022723D32A7D00E0D709 /* WordbookManager.swift */,
+				A558C4F123DC3DCD004302BE /* CustomTextField.swift */,
 				A5CC021523D3127C00E0D709 /* ViewController.swift */,
+				A51AB5CF245FE26B009B5397 /* TestPageViewController.swift */,
 				A5CC022F23D338F600E0D709 /* TestViewController.swift */,
-				A5CC022923D32AAD00E0D709 /* WordbookViewController.swift */,
 				A5DE9E9223D3FE3F00E839C5 /* DetailInTestViewController.swift */,
 				A5CC022B23D32AC200E0D709 /* SettingViewController.swift */,
+				A5CC022923D32AAD00E0D709 /* WordbookViewController.swift */,
+				A558C4EF23DC0D79004302BE /* WordDetailViewController.swift */,
+				A54C06942461BE5E006C8DC8 /* AddViewController.swift */,
+				A59C05302462C1A000354894 /* AddDetailViewController.swift */,
 				A5CC021723D3127C00E0D709 /* Main.storyboard */,
 				A5CC021A23D3127F00E0D709 /* Assets.xcassets */,
 				A5CC021C23D3127F00E0D709 /* LaunchScreen.storyboard */,
 				A5CC022D23D3349000E0D709 /* wordbook.csv */,
 				A5CC021F23D3127F00E0D709 /* Info.plist */,
-				A558C4F123DC3DCD004302BE /* CustomTextField.swift */,
 			);
 			path = Wordbook;
 			sourceTree = "<group>";
@@ -165,9 +174,12 @@
 			files = (
 				A5CC023023D338F600E0D709 /* TestViewController.swift in Sources */,
 				A5CC022823D32A7D00E0D709 /* WordbookManager.swift in Sources */,
+				A54C06952461BE5E006C8DC8 /* AddViewController.swift in Sources */,
 				A5CC021623D3127C00E0D709 /* ViewController.swift in Sources */,
+				A59C05312462C1A000354894 /* AddDetailViewController.swift in Sources */,
 				A5CC021223D3127C00E0D709 /* AppDelegate.swift in Sources */,
 				A558C4F223DC3DCD004302BE /* CustomTextField.swift in Sources */,
+				A51AB5D0245FE26B009B5397 /* TestPageViewController.swift in Sources */,
 				A5CC021423D3127C00E0D709 /* SceneDelegate.swift in Sources */,
 				A558C4F023DC0D79004302BE /* WordDetailViewController.swift in Sources */,
 				A5CC022C23D32AC200E0D709 /* SettingViewController.swift in Sources */,
